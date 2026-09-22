@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+:root {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Base Theme: Light Mode (Pink Canvas Default) */
+:root,
+html[data-theme-mode="light"] {
+  --bg-main: #fff0f5; /* LavenderBlush soft pink canvas */
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-surface-muted: #ffe8ef;
+  --border-subtle: rgba(244, 114, 182, 0.25);
+  --border-card: rgba(244, 114, 182, 0.35);
+  --text-main: #370617; /* Deep berry-black with high contrast */
+  --text-body: #4c1d31; /* Legible warm rose-slate */
+  --text-muted: #834762; /* Delicate rose-plum */
+  --nav-bg: rgba(255, 240, 245, 0.94);
+}
+
+/* Base Theme: Dark Mode (Velvet Midnight Rose) */
+html[data-theme-mode="dark"] {
+  --bg-main: #140810; /* Velvet deep midnight plum */
+  --bg-surface: #1e0d19;
+  --bg-surface-elevated: #261120;
+  --bg-surface-muted: #2f1427;
+  --border-subtle: rgba(244, 114, 182, 0.20);
+  --border-card: rgba(244, 114, 182, 0.30);
+  --text-main: #fff0f5;
+  --text-body: #fce7f3;
+  --text-muted: #f472b6;
+  --nav-bg: rgba(20, 8, 16, 0.94);
+}
+
+/* Palette 1: Blush & Petal Pink (DEFAULT) */
+html[data-theme-palette="blush-pink"] {
+  --accent-pastel: #f472b6;
+  --accent-pastel-hover: #f9a8d4;
+  --accent-btn-bg: #ec4899;
+  --accent-btn-text: #ffffff;
+  --accent-badge-bg: rgba(244, 114, 182, 0.20);
+  --accent-badge-text: #f9a8d4;
+  --accent-badge-border: rgba(244, 114, 182, 0.45);
+  --accent-glow: rgba(244, 114, 182, 0.30);
+  --accent-glow-subtle: rgba(251, 113, 133, 0.18);
+}
+html[data-theme-mode="light"][data-theme-palette="blush-pink"] {
+  --accent-pastel: #db2777;
+  --accent-pastel-hover: #be185d;
+  --accent-btn-bg: #ec4899;
+  --accent-btn-text: #ffffff;
+  --accent-badge-bg: #fce7f3;
+  --accent-badge-text: #db2777;
+  --accent-badge-border: #f472b6;
+  --accent-glow: rgba(244, 114, 182, 0.28);
+  --accent-glow-subtle: rgba(251, 113, 133, 0.15);
+}
+
+/* Palette 2: Bubblegum Pastel */
+html[data-theme-palette="bubblegum-pink"] {
+  --accent-pastel: #fb7185;
+  --accent-pastel-hover: #fda4af;
+  --accent-btn-bg: #f43f5e;
+  --accent-btn-text: #ffffff;
+  --accent-badge-bg: rgba(251, 113, 133, 0.20);
+  --accent-badge-text: #fda4af;
+  --accent-badge-border: rgba(251, 113, 133, 0.45);
+  --accent-glow: rgba(251, 113, 133, 0.30);
+  --accent-glow-subtle: rgba(244, 114, 182, 0.18);
+}
+html[data-theme-mode="light"][data-theme-palette="bubblegum-pink"] {
+  --accent-pastel: #e11d48;
+  --accent-pastel-hover: #be123c;
+  --accent-btn-bg: #f43f5e;
+  --accent-btn-text: #ffffff;
+  --accent-badge-bg: #ffe4e6;
+  --accent-badge-text: #e11d48;
+  --accent-badge-border: #fb7185;
+  --accent-glow: rgba(251, 113, 133, 0.28);
+  --accent-glow-subtle: rgba(244, 114, 182, 0.15);
+}
+
+/* Palette 3: Peach & Coral Rose */
+html[data-theme-palette="coral-pink"] {
+  --accent-pastel: #fda4af;
+  --accent-pastel-hover: #fecdd3;
+  --accent-btn-bg: #fb7185;
+  --accent-btn-text: #ffffff;
+  --accent-badge-bg: rgba(253, 164, 175, 0.20);
+  --accent-badge-text: #fecdd3;
+  --accent-badge-border: rgba(253, 164, 175, 0.45);
+  --accent-glow: rgba(253, 164, 175, 0.30);
+  --accent-glow-subtle: rgba(254, 205, 211, 0.18);
+}
+html[data-theme-mode="light"][data-theme-palette="coral-pink"] {
+  --accent-pastel: #e11d48;
+  --accent-pastel-hover: #be123c;
+  --accent-btn-bg: #f43f5e;
+  --accent-btn-text: #ffffff;
+  --accent-badge-bg: #fff1f2;
+  --accent-badge-text: #be123c;
+  --accent-badge-border: #fda4af;
+  --accent-glow: rgba(253, 164, 175, 0.28);
+  --accent-glow-subtle: rgba(254, 205, 211, 0.15);
+}
+
+/* Palette 4: Berry & Orchid Pink */
+html[data-theme-palette="magenta-pink"] {
+  --accent-pastel: #e879f9;
+  --accent-pastel-hover: #f0abfc;
+  --accent-btn-bg: #d946ef;
+  --accent-btn-text: #ffffff;
+  --accent-badge-bg: rgba(232, 121, 249, 0.20);
+  --accent-badge-text: #f0abfc;
+  --accent-badge-border: rgba(232, 121, 249, 0.45);
+  --accent-glow: rgba(232, 121, 249, 0.30);
+  --accent-glow-subtle: rgba(244, 114, 182, 0.18);
+}
+html[data-theme-mode="light"][data-theme-palette="magenta-pink"] {
+  --accent-pastel: #c026d3;
+  --accent-pastel-hover: #a21caf;
+  --accent-btn-bg: #d946ef;
+  --accent-btn-text: #ffffff;
+  --accent-badge-bg: #fae8ff;
+  --accent-badge-text: #a21caf;
+  --accent-badge-border: #e879f9;
+  --accent-glow: rgba(232, 121, 249, 0.28);
+  --accent-glow-subtle: rgba(244, 114, 182, 0.15);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+.font-serif-display {
+  font-family: var(--font-serif);
+}
+
+/* Utility classes mapped to active theme variables */
+.theme-bg-main {
+  background-color: var(--bg-main);
+}
+.theme-bg-surface {
+  background-color: var(--bg-surface);
+}
+.theme-bg-surface-elevated {
+  background-color: var(--bg-surface-elevated);
+}
+.theme-bg-surface-muted {
+  background-color: var(--bg-surface-muted);
+}
+.theme-border-subtle {
+  border-color: var(--border-subtle);
+}
+.theme-border-card {
+  border-color: var(--border-card);
+}
+.theme-text-main {
+  color: var(--text-main);
+}
+.theme-text-body {
+  color: var(--text-body);
+}
+.theme-text-muted {
+  color: var(--text-muted);
+}
+.theme-accent-pastel {
+  color: var(--accent-pastel);
+}
+.theme-accent-btn {
+  background-color: var(--accent-btn-bg);
+  color: var(--accent-btn-text);
+}
+.theme-accent-badge {
+  background-color: var(--accent-badge-bg);
+  color: var(--accent-badge-text);
+  border-color: var(--accent-badge-border);
+}
+.theme-nav {
+  background-color: var(--nav-bg);
+}
